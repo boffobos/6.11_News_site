@@ -3,11 +3,27 @@
   padding: 0;
 }
 
+main {
+  background-image: url('https://images.unsplash.com/reserve/0y86gz4sT4O2ZQJIRWXE_IMG_0476.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  position: relative;
+}
+
+main::before {
+  content: '';
+  /* background-color: rgba(173, 163, 163, 0.95); */
+  background-color: rgba(233, 227, 227, 0.95);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 nav {
   height: 30px;
   display: flex;
   justify-content: space-between;
-  /* float: left; */
   align-items: center;
   background: #F51B17;
   padding: 10px 20px;
@@ -30,12 +46,10 @@ nav a {
   display: flex;
 }
 
-
 nav a:hover {
   transform: translateY(5px);
   color: #F9E79F;
 }
-
 
 header {
   width: 100vw;
@@ -93,8 +107,10 @@ footer .links>a {
 }
 
 .news {
-  background-color: #fff;
+  /* background-color: #fff; */
+  position: relative;
   padding: 50px 0 32px;
+  z-index: 20;
 }
 
 section {
@@ -104,12 +120,12 @@ section {
   /* border-bottom: rgb(128, 128, 128) 1px solid; */
 }
 
-section a {
-  color: rgb(33, 37, 41);
+section a, form a {
+  color: rgb(59, 54, 52);
   text-decoration: none;
 }
 
-section a:hover{
+section a:hover, form a:hover{
   color: #0085a1;
 }
 
@@ -119,7 +135,7 @@ section h2 {
 }
 
 .article-meta {
-  color: rgb(134, 142, 150);
+  color: rgb(99, 91, 91);
   margin-bottom: 5px;
 }
 
@@ -130,6 +146,52 @@ section img {
 }
 
 section p {
-  background-color: #F8F9F9;
+  background-color: rgba(226, 222, 222, 0.8);
   padding: 13px 5px;
+}
+
+/* Стили выделения. Чего-то не сработало section::selection. */
+section p::selection, section a::selection, section img::selection, section .article-meta::selection, section h2::selection {
+  color: #fff;
+  background-color: #ff0000;
+}
+
+/* Стили кнопок */
+.btn {
+  padding: 5px 15px;
+  width: 100px;
+  border-radius: 5px;
+  border: #000 1px solid;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #FFF;
+}
+
+dialog {
+  width: 300px;
+  height: 200px;
+}
+
+dialog::backdrop {
+  background:rgba(233, 227, 227, 0.95)
+}
+
+.signin {
+  padding: 5px;
+  margin: 10px auto;
+  display: block;
+  width: 200px;
+}
+
+.signin:focus::placeholder {
+  transition: 0.3s;
+  color: transparent;
+}
+
+dialog div {
+  margin: 15px auto;
+  text-align: center;
 }
