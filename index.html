@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-  <script src="/js/open.js"></script>
   <title>НовостиNews</title>
 </head>
 <body>
+  
   <nav>
     <div id="nav-links">
       <a href="#">Новости IT</a>
@@ -16,10 +16,11 @@
       <a href="#">Новости социума</a>
     </div>
     <div id="login">
-      <button class="btn" id="open">Войти</button>
+      <button id="open" class="btn">Войти</button>
     </div>
   </nav>
-  <dialog open>
+
+  <dialog>
     <form>
       <input type="text" class="signin" id="login" placeholder="Логин" required>
       <input type="text" class="signin" id="pass" placeholder="Пароль" required>
@@ -83,11 +84,11 @@
       </section>
       <section>
         <a href="#">
-          <h2>Самые массовые уличные протесты в России за последние годы</h2>
+          <h2>Bellingcat связал сотрудников ФСБ, следивших за Навальным, со смертями еще трех политических активистов</h2>
         </a>
-        <div class="article-meta">Новости от <a href="https://varlamov.ru/4169718.html">Ильи Варламова</a> от 23.01.2021</div>
-        <img src="https://varlamov.me/2021/mitingnavalny23/00.jpg" alt="Протестующие и полиция">
-        <p>23 января 2021 по всей России прошли акции в поддержку Алексея Навального, протесты затронули как минимум 122 российских города. Напомню, политик был арестован сразу после прибытия в Россию и сейчас ему грозит тюремный срок.
+        <div class="article-meta">Пишет <a href="https://www.bbc.com/russian/news-55829179">BBC russiaN</a> от 27.01.2021</div>
+        <img src="https://img.112.international/original/2018/05/13/273437.PNG" alt="ФСБ">
+        <p>Группа расследователей из Bellingcat обнаружила, что сотрудники ФСБ, следившие за Алексеем Навальным в день отравления политика, в предыдущие годы выезжали и в другие регионы России, где вскоре после их приезда обнаружили мертвыми трех политических активистов.
         </p>
       </section>
     </article>
@@ -101,5 +102,7 @@
   </div>
   <div class="copyright">&copy;НовостиNews <span class="year-text">2021</span></div>
   </footer>
+<!-- Если вставить скрипт вверху, то он не работает. Почему? -->
+  <script src="./js/script.js"></script>
 </body>
 </html>

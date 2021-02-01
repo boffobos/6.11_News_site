@@ -4,14 +4,15 @@
 }
 
 main {
-  background-image: url('https://images.unsplash.com/reserve/0y86gz4sT4O2ZQJIRWXE_IMG_0476.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  /* background-image: url('https://images.unsplash.com/reserve/0y86gz4sT4O2ZQJIRWXE_IMG_0476.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); */
+  background-image: url('https://images.unsplash.com/photo-1502741509793-1bf00d85aeff?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
   position: relative;
 }
 
 main::before {
   content: '';
   /* background-color: rgba(173, 163, 163, 0.95); */
-  background-color: rgba(233, 227, 227, 0.95);
+  background-color: rgba(233, 227, 227, 0.90);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -110,13 +111,14 @@ footer .links>a {
   /* background-color: #fff; */
   position: relative;
   padding: 50px 0 32px;
-  z-index: 20;
+  z-index: 2;
 }
 
 section {
   width: 768px;
   margin: 0 auto 32px;
   padding: 6px 15px;
+  position: relative;
   /* border-bottom: rgb(128, 128, 128) 1px solid; */
 }
 
@@ -146,7 +148,7 @@ section img {
 }
 
 section p {
-  background-color: rgba(226, 222, 222, 0.8);
+  /* background-color: rgba(226, 222, 222, 0.8); */
   padding: 13px 5px;
 }
 
@@ -170,9 +172,15 @@ section p::selection, section a::selection, section img::selection, section .art
   background-color: #FFF;
 }
 
+.btn:hover {
+  transition: 0.5s;
+  background-color: #F0130F;
+}
+
 dialog {
   width: 300px;
   height: 200px;
+  margin: auto;
 }
 
 dialog::backdrop {
@@ -192,6 +200,22 @@ dialog::backdrop {
 }
 
 dialog div {
-  margin: 15px auto;
+  margin: 25px auto;
   text-align: center;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 6px;
+  background: #000 1px solid;
+}
+
+article>:nth-child(even) {
+    background-color: #e9b2b259;
+  }
+
+article>:nth-child(1)::before, 
+article>:nth-child(2)::before {
+  content: 'New';
+  color: #009600
 }
